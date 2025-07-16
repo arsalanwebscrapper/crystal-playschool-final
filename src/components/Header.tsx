@@ -1,9 +1,11 @@
 import { Button } from "@/components/ui/button";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, Settings } from "lucide-react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const navigation = [
     { name: "Home", href: "#home" },
@@ -57,12 +59,15 @@ const Header = () => {
             <Button className="bg-gradient-primary text-white border-0 px-4 xl:px-6 py-2 rounded-xl font-semibold smooth-hover">
               Enroll Now 🎉
             </Button>
-            <a 
-              href="/admin/login" 
-              className="text-xs text-muted-foreground hover:text-primary smooth-hover hidden xl:block"
+            <Button 
+              onClick={() => navigate('/admin/login')}
+              variant="outline"
+              size="sm"
+              className="gap-2 hidden xl:flex"
             >
+              <Settings className="w-4 h-4" />
               Admin
-            </a>
+            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -102,6 +107,17 @@ const Header = () => {
                 </a>
                 <Button className="bg-gradient-primary text-white border-0 py-3 rounded-xl font-semibold">
                   Enroll Now
+                </Button>
+                <Button 
+                  onClick={() => {
+                    navigate('/admin/login');
+                    setIsMenuOpen(false);
+                  }}
+                  variant="outline"
+                  className="gap-2"
+                >
+                  <Settings className="w-4 h-4" />
+                  Admin Login
                 </Button>
               </div>
             </nav>
