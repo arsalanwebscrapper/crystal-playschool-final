@@ -57,7 +57,7 @@ const Header = () => {
               <span className="font-medium hidden xl:inline">+1 (555) 123-PLAY</span>
             </a>
             <Button className="bg-gradient-primary text-white border-0 px-4 xl:px-6 py-2 rounded-xl font-semibold smooth-hover">
-              <!--Enroll Now 🎉--> <EnrollmentModal />
+              {/*Enroll Now 🎉 */} <EnrollmentModal />
             </Button>
             <Button 
               onClick={() => navigate('/admin/login')}
