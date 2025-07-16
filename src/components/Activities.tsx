@@ -92,7 +92,7 @@ const Activities = () => {
       <div className="container mx-auto max-w-7xl">
         {/* Header */}
         <div className="text-center mb-12 lg:mb-16 space-y-4 lg:space-y-6">
-          <h2 className="responsive-heading font-display font-bold rainbow-text gentle-wiggle text-6xl">
+          <h2 className="font-display font-bold rainbow-text gentle-wiggle text-6xl">
             Fun Learning Activities 🎪✨
           </h2>
           <p className="responsive-text text-fun-purple font-semibold max-w-4xl mx-auto leading-relaxed">
