@@ -65,7 +65,7 @@ const About = () => {
       <div className="container mx-auto max-w-7xl">
         {/* Header */}
         <div className="text-center mb-12 lg:mb-16 space-y-4 lg:space-y-6">
-          <h2 className="responsive-heading font-display font-bold rainbow-text gentle-wiggle">
+          <h2 className="responsive-heading font-display font-bold rainbow-text gentle-wiggle text-4xl">
             Why Choose Crystal Play School? ✨🎪
           </h2>
           <p className="responsive-text text-fun-purple font-semibold max-w-4xl mx-auto leading-relaxed">
