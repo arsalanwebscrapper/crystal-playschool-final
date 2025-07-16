@@ -5,6 +5,8 @@ import { ref, onValue } from 'firebase/database';
 import { database } from '@/lib/firebase';
 import { Calendar, User, ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 interface BlogPost {
   id: string;
@@ -16,7 +18,7 @@ interface BlogPost {
   published: boolean;
 }
 
-const Blog = () => {
+const BlogPage = () => {
   const navigate = useNavigate();
   const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
@@ -45,27 +47,33 @@ const Blog = () => {
 
   if (loading) {
     return (
-      <section className="py-20 px-6">
-        <div className="container mx-auto text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto"></div>
-          <p className="mt-4 text-muted-foreground">Loading blog posts...</p>
-        </div>
-      </section>
+      <div className="min-h-screen">
+        <Header />
+        <section className="py-20 px-6">
+          <div className="container mx-auto text-center">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto"></div>
+            <p className="mt-4 text-muted-foreground">Loading blog posts...</p>
+          </div>
+        </section>
+        <Footer />
+      </div>
     );
   }
 
   return (
-    <section className="py-20 px-6 bg-muted/30">
-      <div className="container mx-auto">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-display font-bold gradient-text mb-6">
-            Our Blog 📚
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Stay updated with the latest news, tips, and insights from Crystal Play School!
-          </p>
-        </div>
+    <div className="min-h-screen">
+      <Header />
+      <section className="py-20 px-6 bg-muted/30">
+        <div className="container mx-auto">
+          {/* Header */}
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-display font-bold gradient-text mb-6">
+              Our Blog 📚
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Stay updated with the latest news, tips, and insights from Crystal Play School!
+            </p>
+          </div>
 
         {/* Blog Posts */}
         {blogPosts.length === 0 ? (
@@ -129,9 +137,11 @@ const Blog = () => {
             </Card>
           </div>
         )}
-      </div>
-    </section>
+        </div>
+      </section>
+      <Footer />
+    </div>
   );
 };
 
-export default Blog;
+export default BlogPage;

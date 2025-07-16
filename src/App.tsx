@@ -9,7 +9,7 @@ import NotFound from "./pages/NotFound";
 import AdminLogin from "./components/AdminLogin";
 import AdminDashboard from "./components/AdminDashboard";
 import ProtectedRoute from "./components/ProtectedRoute";
-import Blog from "./components/Blog";
+import BlogPage from "./pages/BlogPage";
 import BlogPost from "./pages/BlogPost";
 
 const queryClient = new QueryClient();
@@ -23,7 +23,7 @@ const App = () => (
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
-            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog" element={<BlogPage />} />
             <Route path="/blog/:id" element={<BlogPost />} />
             <Route path="/admin/login" element={<AdminLogin />} />
             <Route path="/admin/dashboard" element={
