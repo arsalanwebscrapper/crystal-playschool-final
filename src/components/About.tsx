@@ -106,6 +106,7 @@ const About = () => {
               <Button size="lg" className="bg-gradient-rainbow text-white border-0 px-6 sm:px-8 py-4 sm:py-6 rounded-2xl text-base sm:text-lg font-bold smooth-hover w-full sm:w-auto">
                 📞 Schedule a Visit 🎉
               </Button>
+              <EnrollmentModal />
               <Button 
                 variant="outline" 
                 size="lg" 
