@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { BookOpen, Users, Award, Heart, Palette, Music } from "lucide-react";
-
+import EnrollmentModal from "./EnrollmentModal";
 const About = () => {
   const features = [
     {
