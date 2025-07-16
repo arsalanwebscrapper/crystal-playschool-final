@@ -111,7 +111,7 @@ const About = () => {
                 size="lg" 
                 className="glass-button px-6 sm:px-8 py-4 sm:py-6 rounded-2xl text-base sm:text-lg font-bold border-4 border-fun-yellow hover:border-fun-orange w-full sm:w-auto"
               >
-                📋 Download Brochure 📚
+               <a href="https://firebasestorage.googleapis.com/v0/b/helpert-e5609.appspot.com/o/uploads%2Fcrystalplayschool-demo.pdf?alt=media&token=5b0a76d3-9280-4e66-b7ef-aff51553cf82"> 📋 Download Brochure 📚 </a>
               </Button>
             </div>
           </div>
