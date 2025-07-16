@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, Settings } from "lucide-react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import EnrollmentModal from "./EnrollmentModal";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
